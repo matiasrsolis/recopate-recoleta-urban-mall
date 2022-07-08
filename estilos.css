@@ -1,3 +1,25 @@
+@font-face {
+    font-family: 'fagonolfbold';
+    src: url('fonts/fagonolf-bold-webfont.woff2') format('woff2'),
+         url('fonts/fagonolf-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'fagonolfregular';
+    src: url('fonts/fagonolf-regular-webfont.woff2') format('woff2'),
+         url('fonts/fagonolf-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +27,7 @@
     text-decoration: none;
     box-sizing: border-box;
     color: #ffffff;
+    font-family: 'fagonolfbold',sans-serif;
 }
 
 .mobile{
@@ -21,6 +44,10 @@
 
 .color-naranja{
     color: #f91202;
+}
+
+.regular{
+    font-family: 'fagonolfregular',sans-serif;
 }
 
 #main-banner{
@@ -97,10 +124,17 @@ main{
     position: absolute;
     right: -8em;
     top: -4em;
+    transition: all ease .2s;
 }
 
 #actividades ul li.item-activ h2{
     flex: 1;
+    transition: all ease .2s;
+}
+
+#actividades ul li.item-activ ul li p{
+    margin: .2em 0;
+    transition: all ease .2s;
 }
 
 #agenda{
@@ -114,6 +148,79 @@ main{
     margin-bottom: 3em;
 }
 
+/*hover*/
+#actividades ul li.item-activ:hover h2{
+    font-size: 26px;
+    transition: all ease .2s;
+}
+
+#actividades ul li.item-activ:hover p{
+    font-size: 18px;
+    transition: all ease .2s;
+}
+
+#actividades ul li.item-activ:hover img{
+    width: 140px!important;
+    transition: all ease .3s;
+}
+
+
+
+
+footer>div{
+    padding: 3em 9%;
+    background-color: #000000;
+}
+
+footer #legal{
+    background-color: #ffffff;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+footer #legal p{
+    color: #000000;
+    font-size: .7em;
+}
+
+footer #canales{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+footer #canales>div{
+    display: flex;
+    flex-direction: column;
+}
+
+footer #canales ul{
+    display: flex;
+}
+
+footer #canales ul li{
+    display: flex;
+    align-items: center;
+}
+
+footer #canales ul li img{
+    width: 45px;
+    display: block;
+    margin-left: 1em;
+}
+
+footer #canales ul li p{
+    margin-right: 2em;
+}
+
+#logo-footer{
+    width: 125px;
+    display: block;
+    margin-top: 3em;
+}
+
+footer #canales ul li p{
+    font-size: 18px;
+}
 
 
 
@@ -156,6 +263,25 @@ main{
     }
 
 
+    footer>div{
+        padding: 3em 10%;
+    }
+
+    footer #canales>div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #logo-footer{
+        width: 15%;
+        display: block;
+        margin-top: 0em;
+    }
+
+    
+
+
 }
 
 
@@ -176,6 +302,9 @@ main{
     #actividades ul>li.item-activ{
         position: absolute;
     }
+
+
+
 
     /*Para los más peques*/
     #actividades ul>li.item-activ:nth-child(1){
@@ -214,5 +343,21 @@ main{
     #actividades ul>li.item-activ:nth-child(3){
         left: 40%;
         top: 10em;
+    }
+
+    footer #canales ul li p{
+        font-size: 20px;
+    }
+
+    footer #canales ul li img{
+        width: 50px;
+        display: block;
+        margin-left: 1em;
+    }
+
+    #logo-footer{
+        width: 13%;
+        display: block;
+        margin-top: 0em;
     }
 }
