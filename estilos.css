@@ -338,7 +338,7 @@ footer #canales ul li p{
 
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
     /*Metegol*/
     #actividades ul>li.item-activ:nth-child(3){
         left: 40%;
@@ -359,5 +359,9 @@ footer #canales ul li p{
         width: 13%;
         display: block;
         margin-top: 0em;
+    }
+
+    #agenda{
+        font-size: 20px;
     }
 }
