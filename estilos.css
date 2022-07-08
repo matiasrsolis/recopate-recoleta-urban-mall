@@ -53,12 +53,68 @@ main{
 
 #actividades{
     background-color: #f91202;
-    padding: 2em 9%;
+    padding: 3em 9%;
+}
+
+#actividades h1{
+    margin-bottom: 2em;
+}
+
+#actividades>ul{
+    position: relative;
+}
+
+#actividades ul>li:nth-child(odd){
+    margin-left: auto;
+}
+
+
+
+#actividades ul li.item-activ{
+    border: solid 2px #ffffff;
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    padding-right: 6em;
+    width: fit-content;
+    transition: all .2s ease;
+}
+
+/* #actividades ul li.item-activ:hover{
+    font-size: ;
+} */
+
+.content-activ{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#actividades ul li.item-activ img{
+    position: absolute;
+    right: -8em;
+    top: -4em;
+}
+
+#actividades ul li.item-activ h2{
+    flex: 1;
 }
 
 #agenda{
     background-color: #000000;
+    padding: 3em 9%;
+    border-top: solid 3px #ffffff;
+    border-left: none;
 }
+
+#agenda ul li{
+    margin-bottom: 3em;
+}
+
+
 
 
 @media (min-width: 1000px) {
@@ -90,6 +146,8 @@ main{
     }
 
     #agenda{
+        border-left: solid 6px #ffffff;
+        border-top: none;
         width: 30%;
         position: -webkit-sticky; /* Safari */
         position: sticky;
@@ -97,4 +155,64 @@ main{
         padding: 3.5em 10% 2em 3em;
     }
 
+
+}
+
+
+@media (min-width: 1300px){
+
+    /* main{
+        min-height: 100vh;
+    } */
+
+    #actividades>ul{
+        min-height: 450px;
+    }
+
+    #actividades ul>li.item-activ:nth-child(odd){
+        margin-left: 0;
+    }
+
+    #actividades ul>li.item-activ{
+        position: absolute;
+    }
+
+    /*Para los más peques*/
+    #actividades ul>li.item-activ:nth-child(1){
+        top: 0;
+        right: 0;
+    }
+
+    /*Realidad virtual*/
+    #actividades ul>li.item-activ:nth-child(2){
+        left: 0;
+        top: 7em;
+    }
+
+    /*Metegol*/
+    #actividades ul>li.item-activ:nth-child(3){
+        left: 330px;
+        top: 10em;
+    }
+
+    /*Desafío penales*/
+    #actividades ul>li.item-activ:nth-child(4){
+        left: 0;
+        bottom: 4em;
+    }
+
+    /*Maquillaje artístico*/
+    #actividades ul>li.item-activ:nth-child(5){
+        right: 0;
+        bottom: 0;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    /*Metegol*/
+    #actividades ul>li.item-activ:nth-child(3){
+        left: 40%;
+        top: 10em;
+    }
 }
