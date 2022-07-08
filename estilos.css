@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.desktop{
+    display: none;
+}
+
+#main-banner{
+    background-color: #000000;
+    width: 100%;
+}
+
+#slide-home{
+
+}
+
+#slide-home img{
+    display: block;
+    width: 100%;
+}
+
+
+@media (min-width: 300px) {
+    .desktop{
+        display: block;
+    }
+}
